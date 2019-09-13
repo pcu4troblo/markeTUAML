@@ -10,33 +10,31 @@ import { Router } from '@angular/router';
 export class ContenidoComponent implements OnInit {
 
   items: Array<any> = [];
-  
   seller: any;
-
   buscar: string;
 
   constructor(private itemService: ItemsService, private router: Router) { }
 
   ngOnInit() {
-   this.mostrar()
-    }
-    
+    this.mostrar()
+  }
+
   mostrar() {
     this.items = [];
     this.itemService.getAll(this.buscar)
       .subscribe(data => {
-              this.items = data.results;
-              console.log(this.items);
-            })
+        this.items = data.results;
+        console.log(this.items);
+      });
   }
 
-  onSelected(item: any){
+  onSelected(item: any) {
     this.router.navigateByUrl("/items/" + item.id);
   }
 
-  onKeydown(event){
+  onKeydown(event) {
     this.mostrar();
     console.log(event);
-    
+
   }
 }

@@ -18,7 +18,6 @@ export class ContenidoComponent implements OnInit {
   constructor(private itemService: ItemsService, private router: Router) { }
 
   ngOnInit() {
-      
    this.mostrar()
     }
     
@@ -26,7 +25,7 @@ export class ContenidoComponent implements OnInit {
     this.items = [];
     this.itemService.getAll(this.buscar)
       .subscribe(data => {
-              this.items = data.products;
+              this.items = data.results;
               console.log(this.items);
             })
   }

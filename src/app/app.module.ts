@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -30,7 +29,6 @@ import { DetalleCarritoComponent } from './components/detalle-carrito/detalle-ca
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    NgbModule
   ],
   providers: [ItemsService],
   bootstrap: [AppComponent]

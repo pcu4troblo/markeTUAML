@@ -21,7 +21,7 @@ export class DetalleCarritoComponent implements OnInit {
   }
 
   onSelected(item: CarritoInterface){
-    this.router.navigateByUrl("/detalles/" + item.id);
+    this.router.navigateByUrl("/items/" + item.id);
   }
 
   getItems(){
